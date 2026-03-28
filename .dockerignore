@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+output/
+hwm_store/
+data/
+.env
+.git/
+k8s/
+*.pdf

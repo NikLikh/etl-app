@@ -1,0 +1,15 @@
+.env
+config/settings.yaml
+k8s
+
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+data/
+output/
+hwm_store/
+
+.idea/
+.vscode/
