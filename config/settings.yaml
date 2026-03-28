@@ -1,0 +1,30 @@
+source:
+  type: postgres
+  host: ecommerce_postgres
+  port: 5432
+  database: ecommerce
+  table: public.events
+
+target:
+  type: parquet
+  path: /shared_data/output/ecommerce_events
+  partition_by:
+    - event_date
+
+spark:
+  app_name: "EcommerceETL"
+  master: "spark://spark-master:7077"
+  config:
+    spark.sql.session.timeZone: "UTC"
+    spark.driver.memory: "1g"
+    spark.executor.memory: "1g"
+    spark.jars.packages: "org.postgresql:postgresql:42.7.3"
+    spark.ui.port: "4040"
+
+hwm_store:
+  type: yaml
+  path: ./hwm_store/hwm.yaml
+
+incremental:
+  hwm_column: event_time
+  

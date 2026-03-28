@@ -1,5 +1,4 @@
 .env
-config/settings.yaml
 k8s
 
 __pycache__/
