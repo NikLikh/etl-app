@@ -17,7 +17,7 @@
 
 ## Стек
 
-Python 3.13, Apache Spark 4.0 (PySpark), onETL, PostgreSQL 16, FastAPI, Docker Compose
+Python 3.13, PySpark 4.1.1, onETL, PostgreSQL 16, FastAPI, Docker Compose
 
 ## Структура
 
